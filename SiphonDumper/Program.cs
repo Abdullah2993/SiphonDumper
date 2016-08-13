@@ -11,6 +11,7 @@ namespace SiphonDumper
 {
     class Program
     {
+        const string Cookie = "";
         const string DumpLocation = "./Dumps/";
         const string BeginLink = "<a href=\"exploits.php?id=";
         const string BeginHTTP = "\">http://";
