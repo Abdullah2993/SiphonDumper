@@ -88,36 +88,7 @@ namespace SiphonDumper
                                     using (StreamReader DumpSR = new StreamReader(DumpStream))
                                     {
                                         DumpText = DumpSR.ReadToEnd();
-
-                                        DumpText = HttpUtility.HtmlDecode(DumpText);
-
-                                        DumpText = DumpText.Replace("&quot;", "\"");
-                                        DumpText = DumpText.Replace("&lt;", "<");
-                                        DumpText = DumpText.Replace("&gt;", ">");
-                                        DumpText = DumpText.Replace("&amp;", "&");
-                                        DumpText = DumpText.Replace("&apos;", "'");
-                                        DumpText = DumpText.Replace("&eacute;", "é");
-                                        DumpText = DumpText.Replace("&circ;", "^");
-                                        DumpText = DumpText.Replace("&tilde;", "~");
-                                        DumpText = DumpText.Replace("&ensp;", " ");
-                                        DumpText = DumpText.Replace("&emsp;", " ");
-                                        DumpText = DumpText.Replace("&thinsp;", " ");
-                                        DumpText = DumpText.Replace("&zwnj;", "");
-                                        DumpText = DumpText.Replace("&zwj;", "");
-                                        DumpText = DumpText.Replace("&lrm;", "");
-                                        DumpText = DumpText.Replace("&rlm;", "");
-                                        DumpText = DumpText.Replace("&ndash;", "–");
-                                        DumpText = DumpText.Replace("&mdash;", "—");
-                                        DumpText = DumpText.Replace("&lsquo;", "‘");
-                                        DumpText = DumpText.Replace("&rsquo;", "’");
-                                        DumpText = DumpText.Replace("&sbquo;", "‚");
-                                        DumpText = DumpText.Replace("&ldquo;", "“");
-                                        DumpText = DumpText.Replace("&rdquo;", "”");
-                                        DumpText = DumpText.Replace("&bdquo;", "„");
-                                        DumpText = DumpText.Replace("&permil;", "‰");
-                                        DumpText = DumpText.Replace("&lsaquo;", "‹");
-                                        DumpText = DumpText.Replace("&rsaquo;", "›");
-                                        DumpText = DumpText.Replace("&euro;", "€");
+                                        DumpText = HttpUtility.HtmlDecode(DumpText);                                    
                                     }
 
                                     //remove the cloudflare email obfuscation
