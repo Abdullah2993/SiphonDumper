@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Web;
 
 namespace SiphonDumper
 {
@@ -87,7 +88,9 @@ namespace SiphonDumper
                                     using (StreamReader DumpSR = new StreamReader(DumpStream))
                                     {
                                         DumpText = DumpSR.ReadToEnd();
-                                        
+
+                                        DumpText = HttpUtility.HtmlDecode(DumpText);
+
                                         DumpText = DumpText.Replace("&quot;", "\"");
                                         DumpText = DumpText.Replace("&lt;", "<");
                                         DumpText = DumpText.Replace("&gt;", ">");
